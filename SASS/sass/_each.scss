@@ -1,0 +1,23 @@
+// $lista: 1 2 3 4 5;
+// $margenes: 1 2 3 4 5;
+
+// @each $dinamica in $lista{
+//     .elemento#{$dinamica}{
+//         color:#000;
+//     }
+// }
+
+// // @each $variable in $lista
+
+// @each $margen in $margenes{
+//     .m-#{$margen}{
+//         margin: $margen*1em;
+//     }
+// }
+
+$mapa:(
+    "primary": crimson,
+    "secondary": steelblue,
+    "shadow": 1px 1px solid #000
+);
+
