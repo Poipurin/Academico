@@ -1,0 +1,18 @@
+.card{
+    color: teal;
+    &--grid{
+        display: grid;
+    }
+    
+    &__title{
+        text-align: center;
+    }
+    &__cta{
+        color:crimson;
+
+        &--green{
+            color: green;
+        }
+    }
+    
+}
