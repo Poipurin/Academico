@@ -21,3 +21,24 @@ $condicional: false;
 @debug 100 <= 90; //false
 @debug #000 == rgb(0,0,0);//true
 @debug #000 != rgb(0,0,0);//false
+
+$display:block;
+
+@mixin display($display){
+    @if $display == grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    @else{
+        display: $display;
+    }
+}
+
+.hero{
+    @include display(grid)
+}
+
+.button{
+    @include display(inline-block);
+}
+
