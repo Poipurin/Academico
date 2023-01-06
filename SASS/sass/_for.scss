@@ -1,0 +1,33 @@
+/* @for $iterador from 1 through 10 {//puede ser ascendente o decreciente
+    .selector#{$iterador}{
+        color:crimson
+    }
+
+}
+
+@for $i from 1 through 5 {
+    .animation__name--#{$i}{
+        animation-name: name#{$i};
+        animation-duration: 1s * $i;
+        @keyframes name#{$i} {
+            100%{
+                transform: translate(100% * $i);
+            }
+        }
+    }
+
+} */
+//4 columnas y 2 filas
+//5 elementos
+
+@for $iterator from 1 through 5 {
+    .grid__item--#{$iterator}{
+        @if($iterator == 5){
+            grid-row: 2/3;
+            grid-column: 1/-1;
+        }@else{
+            grid-row: 1/2;
+            grid-column: #{$iterator} / #{$iterator+1};
+        }
+    }
+}
