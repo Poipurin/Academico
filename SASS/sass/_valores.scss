@@ -1,8 +1,48 @@
+@use 'sass:math';
+@use 'sass:string';
+@use 'sass:meta';
 //números, existen 2 en sass
 $variable: 100; //entero
 $pixeles: 100px; //con unidades
+$division: 10px / 2px; //no se recomienda usar, proximamente no se podrá usar en sass
+$operaciones: 5 * 4 * 6 / 3 *1px;
+
 
 @debug 'El valor es igual a' 100 * 100; //me permite crear expresiones en sass y mandarlas por consola
 @debug 'El valor es igua a #{100 * 100}'; //se puede interpolar
 
-// en css no hay unidades al cuadrado por lo que 100px*100px sería un error e
+// en css no hay unidades al cuadrado por lo que 100px*100px sería un error
+
+body{
+    //animation-duration: 30px + 10px; //siempre y cuando las unidades sean compatibles (entre métricas se puede como px y cm) y no multiplicaciones al cuadrado
+    //animation-duration: $division; //la división funciona como variable
+    //animation-duration: $operaciones;
+    font-size: math.div(4,5); //esta es la manera de dividir
+}
+
+//quoted string '', ""
+//unquoted string  al interpolar en sass se convierten en sin comillas
+
+$selector: "h1";
+
+#{$selector}{
+    color: #000;
+}
+
+$strings-comillas: "header header header";
+$strings-sincomillas: center center;
+$numero: 3;
+
+@debug meta.type-of($strings-sincomillas);//de qué tipo de valor es la variable
+@debug meta.type-of($numero);//number
+
+.title {
+    //text-align: $strings-sincomillas;
+    //text-align: string.quote($strings-sincomillas);//no permite pasar a comillas si hay espacios a menos que se interpole
+    text-align: '#{$strings-sincomillas}';
+}
+
+.grid{
+    //grid-template-areas: $strings-comillas;
+    grid-template-areas: string.unquote($strings-comillas); //con la importación string el unquote quita las comillas
+}
