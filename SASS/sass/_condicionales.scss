@@ -1,0 +1,23 @@
+//booleans, true / false
+
+$condicional: false;
+
+@if($condicional){
+    .grid{
+        display: grid;
+    }  
+}@else{
+    .flexbox{
+        display: flex;
+    }
+}
+
+//si es verdadero entra al if y si es falso entra al else
+
+@debug 100 > 101; //false
+@debug 100 > 90; //true
+@debug 100 >= 100; //true
+@debug 100 <= 101; //true
+@debug 100 <= 90; //false
+@debug #000 == rgb(0,0,0);//true
+@debug #000 != rgb(0,0,0);//false
