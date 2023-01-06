@@ -1,0 +1,20 @@
+@use 'sass:meta';
+@use 'sass:list';
+
+$color: #000; //hexa
+$colorrgba: (0,0,0);//rgba
+$colorhsl: hsl(228, 7%, 86%);
+
+@debug meta.type-of($colorhsl);
+
+$boxshadow: 1px 1px 20px;
+@debug meta.type-of($boxshadow); //es una lista, una secuencia de valores separados por comas o espacios, incluso entre corchetes
+
+$margen: 10px 20px 40px 30px;
+
+.grid{
+    margin-top: list.nth($margen, 1 ); //lista, posición
+    margin-bottom: list.nth($margen,3);
+    margin-left: list.nth($margen, 4);
+    margin-right: list.nth($margen, 2);
+}
