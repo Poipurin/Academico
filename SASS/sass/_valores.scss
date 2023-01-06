@@ -1,0 +1,8 @@
+//números, existen 2 en sass
+$variable: 100; //entero
+$pixeles: 100px; //con unidades
+
+@debug 'El valor es igual a' 100 * 100; //me permite crear expresiones en sass y mandarlas por consola
+@debug 'El valor es igua a #{100 * 100}'; //se puede interpolar
+
+// en css no hay unidades al cuadrado por lo que 100px*100px sería un error e
