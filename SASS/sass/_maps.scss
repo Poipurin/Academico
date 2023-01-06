@@ -1,0 +1,23 @@
+@use 'sass:meta';
+@use 'sass:map';
+
+$colores: (
+    "key": aliceblue,  //valor clave y su valor
+    "primary": royalblue, //las claves no se pueden repetir pero sí el valor
+    "secondary": crimson,
+    "buttons": teal
+);
+@debug meta.type-of($colores); //mapa
+
+//map.get($mapa, $key);
+h1{
+    color:map.get($colores, "primary");
+}
+
+h2{
+    color: map.get($colores, "secondary");
+}
+
+button{
+    color:map.get($colores, "buttons");
+}
