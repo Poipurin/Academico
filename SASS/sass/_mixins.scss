@@ -1,3 +1,4 @@
+@use 'sass:meta';
 /* @mixin center{//definen estilos que pueden ser reutilizados
     display: flex;
     justify-content: center;
@@ -29,7 +30,7 @@ $gutters: 30px;
 } */
 
 //en caso de que no pase un valor tomará su valor por defecto
-/* @mixin grid-generator($selector, $columna-i:1, 
+ @mixin grid-generator($selector, $columna-i:1, 
 $fila:1, $columna-t:2, $validar:true){
 
     @if($validar){
@@ -39,7 +40,7 @@ $fila:1, $columna-t:2, $validar:true){
     &__#{$selector}{
         grid-column: #{$columna-i} / #{$columna-t};
     }
-} */
+} 
 
 /* .hero{
     @include grid-generator(img);
@@ -80,7 +81,46 @@ $fila:1, $columna-t:2, $validar:true){
 } */
 
 
+//... args indefinidos
+// @mixin crear-layout($lista...){
+//     @each $propiedad, $valor in meta.keywords($lista){
+//         #{$propiedad}: $valor;
+//     }
 
+// }
+
+// .hero{//crear mapas
+//     @include crear-layout(
+//         $display:grid, $gap: 1em, $color:red);
+// }
+
+//bloques de contenido
+
+@mixin crear-layout ($rows, $columns){
+    $color:#fff;
+    $background: royalblue;
+    display: grid;
+    grid-template-rows: repeat($rows, 1fr);
+    grid-template-columns: repeat($columns, 1fr);
+
+    @media (max-width: 500px){
+        @content($color, $background);//mandar la variable
+    }
+}
+
+.hero{
+    @include crear-layout(5, 6) using ($color, $background){//llamar la variable con using
+        grid-template-rows: repeat(3, 1 fr);
+        grid-template-rows: 1fr;
+        color: $color;
+        background-color: $background;
+
+
+        &__title{
+            background-color: #fff;
+        }
+    }
+}
 
 
 
