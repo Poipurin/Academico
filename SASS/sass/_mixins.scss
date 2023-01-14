@@ -27,15 +27,21 @@ $gutters: 30px;
 .card{
     @include center;
 } */
-.hero {
-  display: grid;
-  display: grid;
-}
-.hero__img {
-  grid-column: 1/2;
-}
-.hero__title {
-  grid-column: 3/2;
+
+//en caso de que no pase un valor tomará su valor por defecto
+@mixin grid-generator($selector, $columna-i:1, $fila:1, $columna-t:2){
+    display: grid;
+
+    &__#{$selector}{
+        grid-column: #{$columna-i} /#{$columna-t};
+    }
 }
 
-/*# sourceMappingURL=index.css.map */
+.hero{
+    @include grid-generator(img);
+    @include grid-generator(title, 3,-1);
+}
+
+
+
+
