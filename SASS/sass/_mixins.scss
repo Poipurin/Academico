@@ -29,18 +29,58 @@ $gutters: 30px;
 } */
 
 //en caso de que no pase un valor tomará su valor por defecto
-@mixin grid-generator($selector, $columna-i:1, $fila:1, $columna-t:2){
+/* @mixin grid-generator($selector, $columna-i:1, 
+$fila:1, $columna-t:2, $validar:true){
+
+    @if($validar){
     display: grid;
+    }
 
     &__#{$selector}{
-        grid-column: #{$columna-i} /#{$columna-t};
+        grid-column: #{$columna-i} / #{$columna-t};
+    }
+} */
+
+/* .hero{
+    @include grid-generator(img);
+    @include grid-generator(title, 3,-1, false);
+    @include grid-generator(button, 2,-1, false);
+} */
+
+//en orden a menos que pases el mism nombre del arg del mixing
+/* .hero{
+    @include grid-generator($columna-t:4, $selector:grid, $columna-i:1, $validar: false);
+} */
+
+/* @mixin addImage($img, $repeat, $size){
+    position: fixed;
+    top:0;
+    left: 0;
+    
+    background: {//acá van las subpropiedades
+        image:url($img); //en vez de background-image: ; y así
+        repeat: $repeat;
+        size: $size;
+    }
+
+    animation:{
+        duration:1s;
+        name:show;
+        delay:.5s;
+    }
+
+    margin:{
+        top:0;
+        left:0;
     }
 }
 
 .hero{
-    @include grid-generator(img);
-    @include grid-generator(title, 3,-1);
-}
+    @include addImage('uno.png', no-repeat, cover);
+} */
+
+
+
 
 
 
