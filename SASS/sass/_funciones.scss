@@ -1,0 +1,16 @@
+//se deben utilizar para definir operaciones y que se puedan reutilizar en toda la pág
+@use 'sass:math';
+
+@function pixelesToEm($pixeles){
+    $unidad: math.div($pixeles, 1px);//eliminar la unidad
+    $resultado: math.div($unidad, 16);
+    //siempre deben retornar un valor
+
+    @return $resultado * 1 em;
+}
+
+@debug pixelesToEm(16px);
+
+.title{
+    font-size: pixelesToEm(40px);
+}
