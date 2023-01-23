@@ -13,3 +13,5 @@ function saludo(){
 }
 
 saludo();
+//la asignación a una constante no es posible
+const pi = 3.1416;
