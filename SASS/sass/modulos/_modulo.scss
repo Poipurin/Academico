@@ -1,0 +1,8 @@
+@use '_colores';
+@use '_colores2';
+@use 'sass:math';
+
+.hero{
+    color: colores.$primary;
+    background-color: colores2.$primary;
+}
