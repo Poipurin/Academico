@@ -1,4 +1,2 @@
-@forward 'colores'; 
-@forward 'colores2'; 
-@forward 'modulo'; 
-@use 'colores';
+@forward 'colores'as color-*; 
+@forward 'modulo' as mixins-*; 

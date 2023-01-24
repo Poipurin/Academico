@@ -9,14 +9,13 @@ $textos:(
     'cta': 1.5em
 );
 
-$estilosGenerales: map.merge($textos, index.$colores);
+$estilosGenerales: map.merge($textos, index.$mixins-colores);
 
 //para llamar mixin se necesita el include
-@include index.recorrerMap($estilosGenerales);
+@include index.mixins-recorrerMap($estilosGenerales);
 
 body{
-    font-size: index.$title;
-    color: index.$primary;
+    
 }
 
 
