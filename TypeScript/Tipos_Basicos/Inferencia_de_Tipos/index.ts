@@ -1,4 +1,4 @@
-let mensaje2:string = "prueba"
+let mensaje:string = "prueba"
 
 const prueba = 100;
 
