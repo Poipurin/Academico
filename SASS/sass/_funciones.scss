@@ -16,3 +16,12 @@
     $font-size:32px;
     font-size: pixelesToEm(40px, 26px);
 }
+
+@function sumarElementos($valores...){
+    $suma:0;
+    @each $elementos in $valores{
+        $suma: $suma + $elementoSuma;
+    }
+
+    @return $suma * 1px;
+}

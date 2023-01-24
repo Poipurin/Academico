@@ -1,1 +1,4 @@
-$primary:steelblue;
+@use 'colores' with (
+    $primary: crimson,
+    $secondary: teal, 
+    );

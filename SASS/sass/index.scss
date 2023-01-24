@@ -1,5 +1,8 @@
-@use 'modulos/modulo' as funcionalidades;
-@use 'modulos/colores' as c;
+@use 'modulos/modulo' as *;
+@use 'modulos/colores' with (
+    $primary: steelblue,
+    $secondary: yellow, 
+    );
 @use 'sass:map';
 
 $textos:(
@@ -9,11 +12,13 @@ $textos:(
     'cta': 1.5em
 );
 
-$estilosGenerales: map.merge($textos, funcionalidades.$colores);
+$estilosGenerales: map.merge($textos, $colores);
 
 //para llamar mixin se necesita el include
-@include funcionalidades.recorrerMap($estilosGenerales);
+//@include funcionalidades.recorrerMap($estilosGenerales);
 
 body{
-    color: c.$primary;
+    color: colores.$primary;
+    background-color: colores.$secondary;
 }
+
