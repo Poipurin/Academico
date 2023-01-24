@@ -1,2 +1,14 @@
 @use 'modulos/modulo';
+@use 'sass:map';
 
+$textos:(
+    'titulo':4em,
+    'subtitulo': 1em,
+    'parrafo': 1em,
+    'cta': 1.5em
+);
+
+$estilosGenerales: map.merge($textos, modulo.$colores);
+
+//para llamar mixin se necesita el include
+@include modulo.recorrerMap($estilosGenerales);

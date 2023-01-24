@@ -1,8 +1,21 @@
-@use '_colores';
-@use '_colores2';
-@use 'sass:math';
+@use 'sass:map';
+@use 'sass:meta';
 
-.hero{
-    color: colores.$primary;
-    background-color: colores2.$primary;
+
+$colores: (
+    'primary': #000,
+    'secondary': #f00,
+    'titulo': steelblue
+);
+
+@mixin recorrerMap($mapa){
+    @each $clave, $valor in $mapa{
+        .#{$clave}{
+            @if(meta.type-of($valor) == color){
+                color: $valor;
+            }@else{
+                font-size: $valor;
+            }
+        }
+    }
 }
