@@ -1,0 +1,30 @@
+.titulo {
+  color: steelblue;
+}
+
+.subtitulo {
+  font-size: 1em;
+}
+
+.parrafo {
+  font-size: 1em;
+}
+
+.cta {
+  font-size: 1.5em;
+}
+
+.primary {
+  color: #000;
+}
+
+.secondary {
+  color: #f00;
+}
+
+body {
+  font-size: 3 rem;
+  color: red;
+}
+
+/*# sourceMappingURL=styles.css.map */

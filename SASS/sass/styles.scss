@@ -1,0 +1,22 @@
+@use 'modulos/index';
+
+@use 'sass:map';
+
+$textos:(
+    'titulo':4em,
+    'subtitulo': 1em,
+    'parrafo': 1em,
+    'cta': 1.5em
+);
+
+$estilosGenerales: map.merge($textos, index.$colores);
+
+//para llamar mixin se necesita el include
+@include index.recorrerMap($estilosGenerales);
+
+body{
+    font-size: index.$title;
+    color: index.$primary;
+}
+
+
