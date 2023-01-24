@@ -1,25 +1,25 @@
-.titulo {
-  color: steelblue;
+.textos, .hero__copy, .hero__title {
+  line-height: 1.7;
+  letter-spacing: 1.5;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+.textos:hover, .hero__copy:hover, .hero__title:hover {
+  text-decoration: underline;
+}
+.textos ::before, .hero__copy ::before, .hero__title ::before {
+  content: "Hola";
+}
+.textos__bold {
+  font-weight: bold;
 }
 
-.subtitulo {
-  font-size: 1em;
+.hero__title {
+  font-size: 2rem;
 }
 
-.parrafo {
-  font-size: 1em;
-}
-
-.cta {
-  font-size: 1.5em;
-}
-
-.primary {
-  color: #000;
-}
-
-.secondary {
-  color: #f00;
+.hero__copy {
+  font-size: 5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
