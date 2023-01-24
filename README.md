@@ -2,7 +2,7 @@
 Compilación de cursos de distintos lenguajes y herramientas de programación
 
 <h2>Sass <i>(en curso)</i></h2>
-<b>Curso a fondo de scss de la plataforma Código Fácilito por Alexcg Design</b>
+<b>Curso a fondo de SASS de la plataforma Código Fácilito por Alexcg Design</b>
 <h3>Contenidos</h3>
 ●Variables<br>
 ●Interpolación y Nesting<br>
