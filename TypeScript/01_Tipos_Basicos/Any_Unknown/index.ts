@@ -14,8 +14,8 @@ let variableString: string = cualquierValor;
 
 // Ejemplo del uso de unknown:
 
-let variableUnknown: unknown = 10;
+let variableUnknown: unknown = 10; //puede recibir cualquier tipo de dato pero solo a los de tipo unknown
 
-variableString = variableUnknown;
+let variable: unknown = variableUnknown;
 
 let otraVariableUnknown: unknown = variableUnknown;
