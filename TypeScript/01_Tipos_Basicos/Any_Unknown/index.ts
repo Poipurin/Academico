@@ -16,6 +16,4 @@ let variableString: string = cualquierValor;
 
 let variableUnknown: unknown = 10; //puede recibir cualquier tipo de dato pero solo a los de tipo unknown
 
-let variable: unknown = variableUnknown;
-
 let otraVariableUnknown: unknown = variableUnknown;
