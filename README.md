@@ -17,3 +17,9 @@ Curso a fondo de SASS de la plataforma Código Fácilito por Alexcg Design.
 Curso esencial de JavaScript
 <h2>TypeScript</h2>
 Curso esencial de TypeScript por Natalia Corea, LinkedIn Learning.
+<h3>Contenidos</h3>
+●Tipos Básicos<br>
+●Tipos Avanzados<br>
+●Clases<br>
+●Tipos Genéricos<br>
+●Utilerías<br>
