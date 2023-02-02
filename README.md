@@ -14,7 +14,7 @@ Curso a fondo de SASS de la plataforma Código Fácilito por Alexcg Design.
 ●Extend<br>
 ●Proyecto final<br>
 <h2>JavaScript <i>(en curso)</i></h2>
-Curso esencial de JavaScript
+Curso esencial de JavaScript por Sergio Brito, LinkedIn Learning.<br>
 <h2>TypeScript</h2>
 Curso esencial de TypeScript por Natalia Corea, LinkedIn Learning.
 <h3>Contenidos</h3>
