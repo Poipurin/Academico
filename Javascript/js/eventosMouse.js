@@ -4,14 +4,14 @@
 
 const boton = document.querySelector('.boton');
 
-boton.addEventListener('', function(){
+boton.addEventListener('click', function(){
     console.log("el botón ha sido pulsado");
 })
 
-boton.addEventListener('', function(){
+boton.addEventListener('mouseover', function(){
     console.log("el mouse está sobre el botón");
 })
 
-boton.addEventListener('', function(){
+boton.addEventListener('mouseout', function(){
     console.log("el mouse está fuera del botón");
 })
